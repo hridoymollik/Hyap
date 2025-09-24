@@ -188,28 +188,7 @@ body.checkout {
   
 }
 
-/* Navbar */
-body.checkout nav {
-  display: flex;
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Align vertically */
-               /* Space between links */
-  background: #111;
 
-}
-
-body.checkout nav a {
-  color: #111f;
-  text-decoration: none;
-  font-size: 16px;
- 
-
-  transition: background 0.3s ease;
-}
-
-body.checkout nav a:hover {
-  background-color: #3e8e55;
-}
 
 
 /* Page Title */
