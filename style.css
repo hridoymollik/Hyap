@@ -182,9 +182,8 @@ footer a {
 
 /* ------------------ Checkout Page ------------------ */
 body.checkout {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+ margin: 0; font-family: 'Poppins', sans-serif;
+  background: #f4f4f4; color: #333;
   font-family: 'Montserrat', sans-serif;
   color: #333;
 }
