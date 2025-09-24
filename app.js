@@ -15,17 +15,47 @@ if(document.getElementById("product-list")){
   const container = document.getElementById("product-list");
   container.innerHTML = products.map(p => `
     <div class="card">
-      <img src="${p.img}" alt="">
+      <img src="${p.img}" alt="" onclick="viewProduct(${p.id})">
       <div class="card-body">
         <h3>${p.name}</h3>
-        <p>৳${p.price}</p>
-
-        <button onclick="viewProduct(${p.id})">View</button>
+        <p>$${p.price}</p>
         <button onclick="addToCart(${p.id})">Add to Cart</button>
       </div>
-    </div>`).join("");
-}
+    </div>
+  `).join("");
 
+  // Apply modern styling
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.border = "1px solid #ddd";
+    card.style.borderRadius = "12px";
+    card.style.padding = "15px";
+    card.style.margin = "10px";
+    card.style.boxShadow = "0 4px 12px rgba(0,0,0,0.1)";
+    card.style.textAlign = "center";
+    card.style.transition = "transform 0.2s";
+    card.style.background = "#fff";
+    
+    card.onmouseover = () => card.style.transform = "scale(1.03)";
+    card.onmouseout = () => card.style.transform = "scale(1)";
+  });
+
+  document.querySelectorAll('.card img').forEach(img => {
+    img.style.width = "100%";
+    img.style.borderRadius = "10px";
+    img.style.cursor = "pointer";
+    img.style.objectFit = "cover";
+  });
+
+  document.querySelectorAll('.card button').forEach(btn => {
+    btn.style.background = "black";
+    btn.style.color = "white";
+    btn.style.border = "none";
+    btn.style.borderRadius = "50px";
+    btn.style.padding = "10px 20px";
+    btn.style.cursor = "pointer";
+    btn.style.fontSize = "14px";
+  });
+}
 // --- VIEW PRODUCT DETAIL ---
 function viewProduct(id){
   localStorage.setItem("selectedProduct", id);
@@ -76,8 +106,7 @@ if(document.getElementById("checkout-form")){
     const address = document.getElementById("address").value;
 
     let orderDetails = cart.map(p => `${p.name} - $${p.price}`).join("\n");
-   orderDetails += `\nTotal: ৳${cart.reduce((sum,p)=>sum+p.price,0)}\nPayment: Cash on Delivery`;
-
+    orderDetails += `\nTotal: BDT${cart.reduce((sum,p)=>sum+p.price,0)}\nPayment: Cash on Delivery`;
 
     // Send order to your email
     emailjs.send("service_qp6t5zj", "template_10u6rjp", {
@@ -149,4 +178,4 @@ function deleteProduct(index){
   products.splice(index,1);
   localStorage.setItem("products", JSON.stringify(products));
   location.reload();
-}
+        }
