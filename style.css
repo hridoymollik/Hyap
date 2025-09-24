@@ -192,21 +192,22 @@ body.checkout {
 /* Navbar */
 body.checkout nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  background: #111;
-  padding: 15px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 25px; /* spacing between links */
+  background: #111;
+  padding: 12px 0;
+  position: sticky; /* stays on top when scrolling */
+  top: 0;
+  z-index: 1000;
 }
 
 body.checkout nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 body.checkout nav a:hover {
