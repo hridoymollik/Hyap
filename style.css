@@ -195,7 +195,7 @@ body.checkout nav {
   justify-content: center;
   align-items: center;
   gap: 5px; /* spacing between links */
-  background: #111;
+  background: #fff;
   padding: 2px 0;
   position: sticky; /* stays on top when scrolling */
   top: 0;
