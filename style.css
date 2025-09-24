@@ -1,4 +1,4 @@
-body.hoe {
+body.home {
   margin: 0; font-family: 'Poppins', sans-serif;
   background: #f4f4f4; color: #333;
 }
@@ -190,25 +190,15 @@ body.checkout {
 }
 
 /* Navbar */
-body.checkout nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px; /* spacing between links */
-  background: #fff;
-  padding: 2px 0;
-  position: sticky; /* stays on top when scrolling */
-  top: 0;
-  z-index: 1000;
-}
+nav {
+  display: flex; gap: 20px;
+  background: #111; padding: 15px;
+ align-items: center;
+ justify-content: center;
 
-body.checkout nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.3s;
 }
+nav a {
+  color: #ffffff; text-decoration: none;
 
 body.checkout nav a:hover {
   background-color: #3e8e55;
