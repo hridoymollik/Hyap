@@ -296,20 +296,8 @@ body.checkout #invoice {
 }
 
 /* ------------------ Responsive ------------------ */
-@media (max-width: 768px) {
-  body.checkout nav {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  body.checkout nav a {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-  }
 
-  body.checkout form#checkout-form {
-    padding: 15px;
   }
 }
 
