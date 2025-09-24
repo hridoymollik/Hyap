@@ -2,85 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Checkout - MyShop</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- EmailJS SDK -->
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="cart.html">Cart</a>
-    <a href="info.html">Info</a>
-  </nav>
+<body class="checkout">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="checkout.html">Checkout</a>
+</nav>
 
-  <h1>Checkout</h1>
+<h2>Checkout</h2>
 
-  <form id="checkout-form">
-  <input type="text" id="name" placeholder="Full Name" required><br>
-  <input type="text" id="address" placeholder="Address" required><br>
-  <input type="text" id="number" placeholder="Phone Number" required><br>
-  <input type="email" id="email" placeholder="Email" required><br>
-  <select id="payment" required>
-    <option value="Cash on Delivery">Cash on Delivery</option>
-    <option value="Credit Card">Credit Card</option>
-  </select><br><br>
-  <button type="submit">Place Order</button>
+<div id="cart-list"></div>
+
+<h3>Total: $<span id="total-price">0</span></h3>
+
+<form id="checkout-form">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <input type="text" id="phone" placeholder="Phone Number" required>
+  <textarea id="address" placeholder="Address" required></textarea>
+  <button type="submit" class="btn">Place Order (Cash on Delivery)</button>
 </form>
 
+<div id="ch-attention">
+<h3> We will contact you by phone or email to confirm your order.</h3><br>
+<h3>অর্ডার নিশ্চিত করার জন্য আমরা ফোন বা ইমেলে যোগাযোগ করব।</h3>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  // Initialize with your public key
-  emailjs.init("MAsKapl9NLIa9Myuf");
 
-  document.getElementById("checkout-form").addEventListener("submit", function(e) {
-    e.preventDefault();
+</div>
 
-    const name = document.getElementById("name").value;
-    const address = document.getElementById("address").value;
-    const number = document.getElementById("number").value;
-    const email = document.getElementById("email").value;
-    const payment = document.getElementById("payment").value;
+<div id="invoice" style="display:none; padding:20px; border:1px solid #333; margin-top:20px;"></div>
 
-    // Get cart items (from localStorage)
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let itemsList = "";
-    let total = 0;
-
-    cart.forEach(item => {
-      total += item.price * item.quantity;
-      itemsList += `${item.title} (x${item.quantity}) - $${item.price * item.quantity}\n`;
-    });
-
-    const templateParams = {
-      customer_name: name,
-      address: address,
-      number: number,
-      email: email,
-      payment: payment,
-      order_id: Math.floor(Math.random() * 1000000),
-      orders: itemsList,
-      cost: {
-        shipping: 5,
-        tax: (total * 0.1).toFixed(2),
-        total: (total + 5 + (total * 0.1)).toFixed(2)
-      }
-    };
-
-    // Send email
-    emailjs.send("service_qp6t5zj", "template_10u6rjp", templateParams)
-      .then(() => {
-        alert("✅ Order placed successfully!");
-        localStorage.removeItem("cart");
-        window.location.href = "index.html";
-      }, (error) => {
-        alert("❌ Failed to send order. Check console.");
-        console.error(error);
-      });
-  });
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>

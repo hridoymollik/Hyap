@@ -2,35 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shop - MyShop</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="shop">
   <nav>
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
-    <a href="cart.html">Cart</a>
-    <a href="info.html">Info</a>
+    <a href="checkout.html">Checkout</a>
   </nav>
 
-  <h1>Shop</h1>
-  <div id="products-container"></div>
+  
+  <div class="product-card">
+  <a href="product.html?id=1">
+    <img src="https://picsum.photos/400?1" alt="Product Name">
+  </a>
+  <div class="card-body">
+    <a href="product.html?id=1">
+      <h3>Product Name</h3>
+    </a>
+    <p class="price">$120</p>
+    <a class="btn" href="checkout.html">Add to Cart</a>
+  </div>
+</div>
 
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-  <script>
-    const container = document.getElementById("products-container");
-    products.forEach(p=>{
-      const div = document.createElement("div");
-      div.className = "product-card";
-      div.innerHTML = `
-        <img src="${p.img}" alt="${p.title}">
-        <h3>${p.title}</h3>
-        <p>৳ ${p.price}</p>
-        <button onclick="addToCart('${p.id}')">Add to Cart</button>
-      `;
-      container.appendChild(div);
-    });
-  </script>
+
+  <script src="app.js"></script>
 </body>
 </html>
