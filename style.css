@@ -191,16 +191,20 @@ body.checkout {
 
 /* Navbar */
 body.checkout nav {
-  
-
-   display: flex; gap: 20px;
-  background: #111; padding: 15px;
- align-items: center;
- justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  gap: 20px;
+  background: #111;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 body.checkout nav a {
-  color: #ffffff; text-decoration: none;
+ color: #fff;
+  text-decoration: none;
+  font-size: 18px; /* Bigger for touch */
+  padding: 8px 12px;
 }
 
 body.checkout nav a:hover {
