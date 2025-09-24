@@ -1,0 +1,580 @@
+body.home {
+  margin: 0; font-family: 'Poppins', sans-serif;
+  background: #f4f4f4; color: #333;
+}
+nav {
+  display: flex; gap: 20px;
+  background: #111; padding: 15px;
+ align-items: center;
+ justify-content: center;
+
+}
+nav a {
+  color: #ffffff; text-decoration: none;
+  
+}
+.hero {
+  text-align: center; padding: 80px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+.btn {
+  padding: 10px 20px; background: #ff4757; color: white;
+  border: none; border-radius: 5px; cursor: pointer;
+}
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; padding: 20px;
+}
+.card {
+  background: white; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 15px; }
+.detail { padding: 40px; }
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; }
+input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+ 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: url('https://picsum.photos/1600/900?blur=2') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background-color: rgba(0, 100, 50, 0.5);
+}
+
+header h1, header p {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #2a5d34;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.about div {
+  max-width: 500px;
+}
+
+footer {
+  background-color: #2a5d34;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer div {
+  max-width: 300px;
+}
+
+footer h3 {
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+  header h1 { font-size: 3rem; }
+  header p { font-size: 1.2rem; }
+  .about { flex-direction: column; }
+}
+.homebtn {
+  display: inline-block;        /* Makes it behave like a button */
+  padding: 12px 30px;           /* Space inside the button */
+  background-color: #2a5d34;    /* Button color */
+  color: #fff;                  /* Text color */
+  text-decoration: none;        /* Remove underline */
+  font-weight: bold;
+  border-radius: 8px;           /* Rounded corners */
+  transition: all 0.3s ease;    /* Smooth hover effect */
+}
+
+.homebtn:hover {
+  background-color: #3e8e55;    /* Hover color */
+  transform: translateY(-2px);  /* Slight lift on hover */
+}
+.btn-container {
+  text-align: center; /* centers inline or inline-block elements */
+  margin-top: 10px;   /* optional spacing */
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------ Checkout Page ------------------ */
+body.checkout {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+body.checkout nav {
+  
+
+   display: flex; gap: 20px;
+  background: #111; padding: 15px;
+ align-items: center;
+ justify-content: center;
+}
+
+body.checkout nav a {
+  color: #ffffff; text-decoration: none;
+}
+
+body.checkout nav a:hover {
+  background-color: #3e8e55;
+}
+
+/* Page Title */
+body.checkout h2 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 2rem;
+  color: #2a5d34;
+}
+
+/* Cart List */
+body.checkout #cart-list {
+  margin-bottom: 20px;
+}
+
+/* Total Price */
+body.checkout h3 {
+  font-size: 1.2rem;
+  color: #2a5d34;
+  margin-bottom: 15px;
+}
+
+/* Checkout Form */
+body.checkout form#checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body.checkout form#checkout-form input,
+body.checkout form#checkout-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+body.checkout form#checkout-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+body.checkout form#checkout-form .btn {
+  padding: 12px;
+  background-color: #2a5d34;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+body.checkout form#checkout-form .btn:hover {
+  background-color: #3e8e55;
+}
+
+/* Attention Section */
+body.checkout #ch-attention {
+  background-color: #e8f5e9;
+  border-left: 5px solid #2a5d34;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+body.checkout #ch-attention h3 {
+  margin: 5px 0;
+  color: #2a5d34;
+}
+
+/* Invoice Section */
+body.checkout #invoice {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  body.checkout nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  body.checkout form#checkout-form {
+    padding: 15px;
+  }
+}
+
+@media(max-width:480px){
+  body.checkout h2 {
+    font-size: 1.5rem;
+  }
+
+  body.checkout h3 {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ------------------ Shop Page ------------------ */
+body.shop {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+body.shop nav {
+  display: flex; gap: 20px;
+  background: #111; padding: 15px;
+ align-items: center;
+ justify-content: center;
+}
+
+body.shop nav a {
+  color: #ffffff; text-decoration: none;
+}
+
+body.shop nav a:hover {
+  background-color: #3e8e55;
+}
+
+/* Page Title */
+body.shop .title {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  font-size: 2rem;
+  color: #2a5d34;
+}
+
+/* Product Grid */
+body.shop #product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px 40px 20px;
+}
+
+/* Product Card */
+body.shop .product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.shop .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Product Image */
+body.shop .product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Card Body */
+body.shop .product-card .card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Product Name */
+body.shop .product-card .card-body h3 {
+  font-size: 1.2rem;
+  color: #2a5d34;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+
+/* Price */
+body.shop .product-card .card-body .price {
+  font-weight: bold;
+  color: #2a5d34;
+}
+
+/* Add to Cart Button */
+body.shop .product-card .card-body .btn {
+  padding: 10px 20px;
+  background-color: #2a5d34;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+body.shop .product-card .card-body .btn:hover {
+  background-color: #3e8e55;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  body.shop #product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:480px){
+  body.shop #product-list {
+    grid-template-columns: 1fr;
+  }
+
+  body.shop .product-card img {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Product Page - eCommerce style */
+body.Product {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+body.Product nav {
+  display: flex; gap: 20px;
+  background: #111; padding: 15px;
+ align-items: center;
+ justify-content: center;
+}
+
+body.Product nav a {
+  color: #ffffff; text-decoration: none;
+}
+
+body.Product nav a:hover {
+  background-color: #3e8e55;
+}
+
+/* Product Detail Layout */
+body.Product .product-detail {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Image */
+body.Product .product-detail .image-container {
+  flex: 1;
+}
+
+body.Product .product-detail .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Product Info */
+body.Product .product-detail .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+}
+
+body.Product .product-detail .product-info h2 {
+  font-size: 2rem;
+  color: #2a5d34;
+}
+
+body.Product .product-detail .product-info .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2a5d34;
+}
+
+body.Product .product-detail .product-info .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+body.Product .product-detail .product-info .btn {
+  padding: 15px 25px;
+  background-color: #2a5d34;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+body.Product .product-detail .product-info .btn:hover {
+  background-color: #3e8e55;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media(max-width:992px){
+  body.Product .product-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body.Product .product-detail .product-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media(max-width:480px){
+  body.Product .product-detail {
+    padding: 20px;
+  }
+
+  body.Product .product-detail .product-info h2 {
+    font-size: 1.5rem;
+  }
+
+  body.Product .product-detail .product-info .price {
+    font-size: 1.2rem;
+  }
+
+  body.Product .product-detail .product-info .description {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
