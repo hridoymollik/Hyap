@@ -192,7 +192,7 @@ body.checkout {
 /* Navbar */
 body.checkout nav {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  flex-wrap: wrap;
   gap: 20px;
   background: #111;
   padding: 15px;
@@ -201,10 +201,12 @@ body.checkout nav {
 }
 
 body.checkout nav a {
- color: #fff;
+  color: #fff;
   text-decoration: none;
-  font-size: 18px; /* Bigger for touch */
+  font-size: 18px;
   padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 body.checkout nav a:hover {
@@ -244,9 +246,9 @@ body.checkout form#checkout-form {
 
 body.checkout form#checkout-form input,
 body.checkout form#checkout-form textarea {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
   width: 100%;
 }
@@ -257,13 +259,13 @@ body.checkout form#checkout-form textarea {
 }
 
 body.checkout form#checkout-form .btn {
-  padding: 12px;
+  padding: 14px;
   background-color: #2a5d34;
   color: #fff;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: background 0.3s ease;
 }
 
@@ -290,13 +292,21 @@ body.checkout #invoice {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-/* Responsive */
-@media(max-width:768px){
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
   body.checkout nav {
     flex-direction: column;
     gap: 10px;
+  }
+
+  body.checkout nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
   }
 
   body.checkout form#checkout-form {
@@ -304,13 +314,18 @@ body.checkout #invoice {
   }
 }
 
-@media(max-width:480px){
+@media (max-width: 480px) {
   body.checkout h2 {
     font-size: 1.5rem;
   }
 
   body.checkout h3 {
     font-size: 1rem;
+  }
+
+  body.checkout nav a {
+    font-size: 15px;
+    padding: 10px;
   }
 }
 
