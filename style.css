@@ -190,19 +190,28 @@ body.checkout {
 }
 
 /* Navbar */
-nav {
-  display: flex; gap: 20px;
-  background: #111; padding: 15px;
- align-items: center;
- justify-content: center;
-
+body.checkout nav {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Align vertically */
+  gap: 20px;                 /* Space between links */
+  background: #111;
+  padding: 15px;
 }
-nav a {
-  color: #ffffff; text-decoration: none;
+
+body.checkout nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
 
 body.checkout nav a:hover {
   background-color: #3e8e55;
 }
+
 
 /* Page Title */
 body.checkout h2 {
